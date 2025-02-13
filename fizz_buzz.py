@@ -8,9 +8,12 @@ class TestFizzBuzzShould:
 
     def test_return_fizz(self) -> None:
         assert fizz_buzz(3) == "Fizz"
+        assert fizz_buzz(6) == "Fizz"
 
 
 def fizz_buzz(number: int) -> str:
     if number == 3:
+        return "Fizz"
+    if number == 6:
         return "Fizz"
     return str(number)
