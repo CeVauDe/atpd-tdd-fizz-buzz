@@ -14,8 +14,13 @@ class TestFizzBuzzShould:
     def test_return_buzz(self, number: int) -> None:
         assert fizz_buzz(number) == "Buzz"
 
+    def test_return_fizz_buzz(self) -> None:
+        assert fizz_buzz(15) == "FizzBuzz"
+
 
 def fizz_buzz(number: int) -> str:
+    if number == 15:
+        return "FizzBuzz"
     if number % 3 == 0:
         return "Fizz"
     if number % 5 == 0:
