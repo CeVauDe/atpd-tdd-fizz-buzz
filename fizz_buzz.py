@@ -14,10 +14,9 @@ class TestFizzBuzzShould:
     def test_return_buzz(self, number: int) -> None:
         assert fizz_buzz(number) == "Buzz"
 
-    def test_return_fizz_buzz(self) -> None:
+    @pytest.mark.parametrize("number", [15, 30, 45])
+    def test_return_fizz_buzz(self, number: int) -> None:
         assert fizz_buzz(15) == "FizzBuzz"
-        assert fizz_buzz(30) == "FizzBuzz"
-        assert fizz_buzz(45) == "FizzBuzz"
 
 
 def fizz_buzz(number: int) -> str:
