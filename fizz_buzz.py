@@ -2,7 +2,7 @@ import pytest
 
 
 class TestFizzBuzzShould:
-    @pytest.mark.parametrize("number,expectation",[(1, "1"), (2, "2"), (4, "4")])
+    @pytest.mark.parametrize("number,expectation", [(1, "1"), (2, "2"), (4, "4")])
     def test_return_input(self, number: int, expectation: str) -> None:
         assert fizz_buzz(number) == expectation
 
@@ -13,6 +13,7 @@ class TestFizzBuzzShould:
     @pytest.mark.parametrize("number", [5, 10, 20])
     def test_return_buzz(self, number: int) -> None:
         assert fizz_buzz(number) == "Buzz"
+
 
 def fizz_buzz(number: int) -> str:
     if number % 3 == 0:
