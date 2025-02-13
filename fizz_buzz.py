@@ -6,10 +6,9 @@ class TestFizzBuzzShould:
     def test_return_input(self, number: int, expectation: str) -> None:
         assert fizz_buzz(number) == expectation
 
-    def test_return_fizz(self) -> None:
-        assert fizz_buzz(3) == "Fizz"
-        assert fizz_buzz(6) == "Fizz"
-        assert fizz_buzz(9) == "Fizz"
+    @pytest.mark.parametrize("number", [3, 6, 9])
+    def test_return_fizz(self, number: int) -> None:
+        assert fizz_buzz(number) == "Fizz"
 
 
 def fizz_buzz(number: int) -> str:
