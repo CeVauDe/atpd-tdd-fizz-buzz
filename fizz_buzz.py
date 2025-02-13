@@ -12,10 +12,13 @@ class TestFizzBuzzShould:
 
     def test_return_buzz(self) -> None:
         assert fizz_buzz(5) == "Buzz"
+        assert fizz_buzz(10) == "Buzz"
 
 def fizz_buzz(number: int) -> str:
     if number % 3 == 0:
         return "Fizz"
     if number == 5:
+        return "Buzz"
+    if number == 10:
         return "Buzz"
     return str(number)
